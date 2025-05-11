@@ -1,9 +1,15 @@
 body{
-    background-color: rgb(53, 53, 53);
-    color: rgb(205, 205, 205);
+    background-color: rgb(72, 71, 71);
+    color: rgb(72, 70, 70);
 }
 .add-question-form{
     visibility: hidden;
     display: flex;
     flex-direction: column;
+    width: 20rem;
+    margin: auto;
+    gap: 0.5rem;
+    background-color: blanchedalmond;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
