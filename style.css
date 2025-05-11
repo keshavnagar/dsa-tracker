@@ -1,3 +1,9 @@
+body{
+    background-color: rgb(53, 53, 53);
+    color: rgb(205, 205, 205);
+}
 .add-question-form{
-    display: none;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
 }
