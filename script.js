@@ -5,7 +5,7 @@ const topic = document.getElementById("topic")
 const difficulty = document.getElementById("difficulty")
 const platform = document.getElementById("platform")
 const link = document.getElementById("link")
-const status = document.getElementById("status")
+const questionStatus = document.getElementById("status")
 const date = document.getElementById("date")
 const notes = document.getElementById("notes")
 
@@ -19,3 +19,15 @@ addQuestionForm.addEventListener("submit",function(event){
   event.preventDefault();
 })
 
+// create new object to track all these fields of add question form
+
+const addQuestionObject = {
+  questionName : questionName.value.trim(),
+  topic : topic.value.trim(),
+  difficulty : difficulty.value.trim(),
+  platform : platform.value.trim(),
+  link : link.value.trim(),
+  status : questionStatus.value.trim(),
+  date : date.value.trim(),
+  notes : notes.value.trim()
+}
