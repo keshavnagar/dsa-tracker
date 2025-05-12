@@ -1,6 +1,6 @@
 body{
     background-color: rgb(72, 71, 71);
-    color: rgb(72, 70, 70);
+   
 }
 .add-question-form{
     visibility: hidden;
@@ -12,4 +12,5 @@ body{
     background-color: blanchedalmond;
     padding: 0.5rem;
     border-radius: 0.5rem;
+     color: rgb(72, 70, 70);
 }
