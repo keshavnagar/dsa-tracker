@@ -19,43 +19,55 @@
       + Add Question
     </button>
     <form class="add-question-form" id="add-question-form" action="">
-      <label for="question-name">Question</label>
-      <input id="question-name" type="text" placeholder="type question name" />
-      <label for="topic">topic</label>
-      <input id="topic" placeholder="write topic name" type="text" />
-      <label for="difficulty">difficulty : </label>
-      <select name="difficulty" id="difficulty">
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="hard">Hard</option>
-      </select>
-      <label for="platform">platform </label>
-      <input
-        id="platform"
-        type="text"
-        placeholder="write platform name like codechef , leetcode etc."
-      />
-      <label for="link">link of the problem</label>
-      <input
-        id="link"
-        type="url"
-        placeholder="provide the link of the problem"
-      />
-      <label for="status">status : </label>
-      <select name="status" id="status">
-        <option value="Not Started">Not Started</option>
-        <option value="In Progress">In Progress</option>
-        <option value="Hard">Done</option>
-      </select>
-      <label for="date">date practiced</label>
-      <input id="date" type="date" placeholder="enter date" />
-      <label for="notes">ntoes</label>
-      <textarea
-        name="notes"
-        id="notes"
-        placeholder="write your notes on this question or explanation"
-      ></textarea>
-      <input type="submit" />
+      <div class="parent">
+        <div class="child1">
+          <label for="question-name">Question</label>
+          <input
+            id="question-name"
+            type="text"
+            placeholder="type question name"
+          />
+          <label for="topic">topic</label>
+          <input id="topic" placeholder="write topic name" type="text" />
+          <label for="difficulty">difficulty : </label>
+          <select name="difficulty" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <div class="child2">
+          <label for="platform">platform </label>
+          <input
+            id="platform"
+            type="text"
+            placeholder="write platform name like codechef , leetcode etc."
+          />
+          <label for="status">status : </label>
+          <select name="status" id="status">
+            <option value="Not Started">Not Started</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Hard">Done</option>
+          </select>
+          <label for="date">date practiced</label>
+          <input id="date" type="date" placeholder="enter date" />
+        </div>
+      </div>
+      <div class="parent2">
+        <label for="link">link of the problem</label>
+        <input
+          id="link"
+          type="url"
+          placeholder="provide the link of the problem"
+        />
+        <label for="notes">notes</label>
+        <textarea
+          name="notes"
+          id="notes"
+          placeholder="write your notes on this question or explanation"
+        ></textarea>
+      </div>
+      <input class="submit" type="submit" />
     </form>
     <table id="add-question-table" class="add-question-table" border="1">
       <thead>
