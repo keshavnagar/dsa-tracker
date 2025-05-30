@@ -11,10 +11,6 @@ const notes = document.getElementById("notes")
 const table = document.querySelector("table")
 const questionList=[];
 
-addQuestionButton.addEventListener("click", function () {
-  addQuestionForm.style.visibility = "visible";
-  addQuestionButton.style.visibility = "hidden";
-});
 
 
 addQuestionForm.addEventListener("submit",function(event){
@@ -70,7 +66,6 @@ function addRowToTable(q){
   // fill the row in a table body 
   tbody.appendChild(row);
   table.style.visibility = "visible";
-  addQuestionForm.style.visibility = "hidden";
 }
 
 
