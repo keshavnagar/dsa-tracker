@@ -20,13 +20,17 @@ body {
   font-optical-sizing: auto;
   font-weight: bolder;
   font-style: normal;
-  width: 32rem;
+  /* width: 32rem; ye fix rahta hai isliye ise hata diya ab yehi width desktop pe same rakhni hai to apan kya karenge  */
+  max-width: 32rem; /* NEW: Limit maximum width */
+  width: 100%; /* NEW: Make it flexible */
 }
 .add-question-form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 68.5rem;
+  /* width: 68.5rem; ye fix rahta hai isliye ise hata diya ab yehi width desktop pe same rakhni hai to apan kya karenge  */
+  width: 100%; /* NEW: Full width on small screens */
+  max-width: 68.5rem; /* NEW: Keep max size for large screens */
   margin: auto;
   gap: 2rem;
   background-color: #02343f;
@@ -51,12 +55,16 @@ body {
 }
 
 #link {
-  width: 45em;
+  /* width: 45em; ise hata diya kyuki ye fix hota hai chuki itni hee widht rahe isliye apan ne max width diya hai */
+  width: 100%; /* NEW: Make input flexible */
+  max-width: 45rem; /* NEW: Cap width */
   height: 2rem;
 }
 
 #notes {
-  width: 15rem;
+  /* width: 15rem;  ise hata diya kyuki ye fix hota hai chuki itni hee widht rahe isliye apan ne max width diya hai */
+  width: 100%; /* NEW: Full width on small screens */
+  max-width: 15rem; /* NEW: Cap width */
   height: 7rem;
   border-radius: 0.2rem;
   padding: 0 0.5rem;
@@ -87,7 +95,9 @@ body {
 }
 
 .submit {
-  width: 27rem;
+  /* width: 27rem; ise hata diya kyuki ye fix hota hai iski jagah apan ne max width diya  */
+  width: 100%; /* NEW: Flexible width */
+  max-width: 27rem; /* NEW: Cap width */
   height: 2.4rem;
   margin-bottom: 1rem;
 }
@@ -98,7 +108,9 @@ table {
   background-color: #02343f;
   color: #f0edcc;
   border: 1px solid #f0edcc;
-  width: 30rem;
+  /* width: 30rem; ise apan ne hata diya kyuki ye fix hota hai , chuki width itni hee rahe isliye apan ne max width diya hai iski jagah */
+  width: 100%; /* NEW: Full width on small screens */
+  max-width: 30rem; /* NEW: Cap width */
   margin: auto;
   visibility: hidden;
 }
@@ -129,7 +141,9 @@ input {
   border-radius: 0.2rem;
   background-color: #f0edcc;
   color: #02343f;
-  width: 15rem;
+  /* width: 15rem; ise hata diya hai kyuki ye fix hota hai chuki widht itni hee rahe isliye apan ne max width di hai  */
+  width: 100%; /* NEW: Flexible width */
+  max-width: 15rem; /* NEW: Cap width */
 }
 
 input::placeholder {
@@ -141,8 +155,8 @@ input::placeholder {
   width: 16rem;
 }
 
-@media (max-width : 768px){
-  .add-question-form{
+@media (max-width: 768px) {
+  .add-question-form {
     width: 60rem;
     height: 100rem;
   }
