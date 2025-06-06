@@ -104,6 +104,7 @@ body {
 
 table {
   /* design */
+  
   border-collapse: collapse;
   background-color: #02343f;
   color: #f0edcc;
@@ -131,6 +132,11 @@ tr td:nth-child(8) {
   white-space: wrap;
 }
 
+.table-container{
+   overflow-x: auto;   /* horizontal scroll enable होगा */
+  -webkit-overflow-scrolling: touch; /* iOS के लिए smooth scrolling */
+}
+
 #difficulty,
 #status,
 #date,
@@ -156,8 +162,18 @@ input::placeholder {
 }
 
 @media (max-width: 768px) {
+  .add-question-button{
+     width: 100%;
+     margin-left: 0;
+
+  }
   .add-question-form {
-    width: 60rem;
-    height: 100rem;
+    width: 100%;
+    padding: 0;
+
+  }
+  .child1,.child2,.parent2{
+    display: flex;
+    flex-direction: column;
   }
 }
