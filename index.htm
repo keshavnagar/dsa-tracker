@@ -19,7 +19,7 @@
       + Add Your Question
     </button>
     <form class="add-question-form" id="add-question-form" action="">
-      <div class="parent">
+      <div class="parent1">
         <div class="child1">
           <div class="lable-input">
             <label for="question-name">Question</label>
@@ -66,7 +66,7 @@
         </div>
       </div>
       <div class="parent2">
-        <div class="lable-input">
+        <div class="child1">
           <label for="notes">notes</label>
           <textarea
             name="notes"
@@ -74,36 +74,34 @@
             placeholder="write your notes on this question or explanation"
           ></textarea>
         </div>
-        <div class="label-input-submit">
-          <div class="lable-input">
-            <label for="link">link of the problem</label>
-            <input
-              id="link"
-              type="url"
-              placeholder="provide the link of the problem"
-            />
-          </div>
-          <input class="submit" type="submit" />
+        <div class="child2">
+          <label for="link">link of the problem</label>
+          <input
+            id="link"
+            type="url"
+            placeholder="provide the link of the problem"
+          />
+          <input type="submit" />
         </div>
       </div>
     </form>
     <div class="table-container">
-    <table id="add-question-table" class="add-question-table" border="1">
-      <thead>
-        <tr>
-          <th>Question Name</th>
-          <th>Topic</th>
-          <th>Difficulty</th>
-          <th>Platform</th>
-          <th class="wrap">Link</th>
-          <th>Status</th>
-          <th>Date</th>
-          <th class="wrap">Notes</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-      </div>
+      <table id="add-question-table" class="add-question-table" border="1">
+        <thead>
+          <tr>
+            <th>Question Name</th>
+            <th>Topic</th>
+            <th>Difficulty</th>
+            <th>Platform</th>
+            <th class="wrap">Link</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th class="wrap">Notes</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

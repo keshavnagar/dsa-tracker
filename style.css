@@ -8,12 +8,12 @@ body {
 .add-question-button {
   display: flex;
   padding-left: 2rem;
-  margin-left: 1.5rem;
+  margin-left: 2rem;
   align-items: center;
   font-size: 1.2rem;
   height: 2.5rem;
   border-radius: 0.5rem;
-  border: 2px solid #f0edcc;
+  border: 1.5px solid #f0edcc;
   background-color: #02343f;
   color: #f0edcc;
   font-family: "Montserrat", sans-serif;
@@ -22,96 +22,130 @@ body {
   font-style: normal;
   /* width: 32rem; ye fix rahta hai isliye ise hata diya ab yehi width desktop pe same rakhni hai to apan kya karenge  */
   max-width: 32rem; /* NEW: Limit maximum width */
-  width: 100%; /* NEW: Make it flexible */
+  width: 100%; /* NEW: Make it flexible , jab bhi media query langayenge to need of 100% okaky */
 }
 .add-question-form {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  /* width: 68.5rem; ye fix rahta hai isliye ise hata diya ab yehi width desktop pe same rakhni hai to apan kya karenge  */
-  width: 100%; /* NEW: Full width on small screens */
-  max-width: 68.5rem; /* NEW: Keep max size for large screens */
+  width: 100%;
+  max-width: 68.5rem;
   margin: auto;
-  gap: 2rem;
   background-color: #02343f;
-  padding: 2rem;
+  padding: 2%; /*responsive dale to padding kam kar dena*/
   border-radius: 0.5rem;
   color: #f0edcc;
   justify-content: center;
   align-items: center;
+  height: fit-content;
 }
 
-.parent {
-  margin-top: 1rem;
+.parent1 {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
 }
 
-.parent2 {
+.parent1 > .child1,
+.parent1 > .child2 {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 7rem;
+  justify-content: space-between;
 }
 
-#link {
-  /* width: 45em; ise hata diya kyuki ye fix hota hai chuki itni hee widht rahe isliye apan ne max width diya hai */
-  width: 100%; /* NEW: Make input flexible */
-  max-width: 45rem; /* NEW: Cap width */
+.parent1 .child1 input {
+  text-align: center;
+  width: 100%;
+  border: 0px;
   height: 2rem;
+  color: #02343f;
+  background-color: #f0edcc;
+  border-radius: 0.4rem;
 }
 
-#notes {
-  /* width: 15rem;  ise hata diya kyuki ye fix hota hai chuki itni hee widht rahe isliye apan ne max width diya hai */
-  width: 100%; /* NEW: Full width on small screens */
-  max-width: 15rem; /* NEW: Cap width */
-  height: 7rem;
-  border-radius: 0.2rem;
-  padding: 0 0.5rem;
+.parent1 .child2 select,
+.parent1 .child2 input {
+  text-align: center;
+  width: 100%;
+  border: 0px;
+  height: 2rem;
   background-color: #f0edcc;
   color: #02343f;
+  border-radius: 0.4rem;
 }
 
+input::placeholder,
 #notes::placeholder {
-  color: #02343f8d;
+  color: #023f4c8d;
 }
 
-.child1,
-.child2 {
-  display: flex;
-  flex-direction: row;
-  gap: 6.7rem;
-}
 .lable-input {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  padding: 1rem;
+  width: 30%;
 }
 
-.label-input-submit {
+.parent2 {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.parent2 .child1,
+.parent2 .child2 {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-.submit {
-  /* width: 27rem; ise hata diya kyuki ye fix hota hai iski jagah apan ne max width diya  */
-  width: 100%; /* NEW: Flexible width */
-  max-width: 27rem; /* NEW: Cap width */
-  height: 2.4rem;
-  margin-bottom: 1rem;
+.parent2 .child1 {
+  width: 63.5%;
+}
+
+.parent2 .child1 #notes {
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  background-color: #f0edcc;
+  border: 0;
+}
+
+.parent2 .child2 {
+  width: 30%;
+}
+
+.parent2 .child2 input{
+  height: 2rem;
+  text-align: center;
+  border-radius: .4rem;
+  background-color: #f0edcc;
+  color: #02343f;
+  border: 0;
+}
+
+.parent2 .child2 :nth-child(3) {
+background-color: #f0edcc;
+border: 0;
+color: #02343f;
+font-weight: bolder;
 }
 
 table {
   /* design */
-  
+
   border-collapse: collapse;
   background-color: #02343f;
   color: #f0edcc;
   border: 1px solid #f0edcc;
-  /* width: 30rem; ise apan ne hata diya kyuki ye fix hota hai , chuki width itni hee rahe isliye apan ne max width diya hai iski jagah */
-  width: 100%; /* NEW: Full width on small screens */
-  max-width: 30rem; /* NEW: Cap width */
+  width: 100%;
+  max-width: 30rem;
   margin: auto;
   visibility: hidden;
 }
@@ -132,48 +166,7 @@ tr td:nth-child(8) {
   white-space: wrap;
 }
 
-.table-container{
-   overflow-x: auto;   /* horizontal scroll enable होगा */
+.table-container {
+  overflow-x: auto; /* horizontal scroll enable होगा */
   -webkit-overflow-scrolling: touch; /* iOS के लिए smooth scrolling */
-}
-
-#difficulty,
-#status,
-#date,
-input {
-  height: 2rem;
-  padding: 0 0.5rem;
-  border: 0px;
-  border-radius: 0.2rem;
-  background-color: #f0edcc;
-  color: #02343f;
-  /* width: 15rem; ise hata diya hai kyuki ye fix hota hai chuki widht itni hee rahe isliye apan ne max width di hai  */
-  width: 100%; /* NEW: Flexible width */
-  max-width: 15rem; /* NEW: Cap width */
-}
-
-input::placeholder {
-  color: #02343f95;
-}
-
-#difficulty,
-#status {
-  width: 16rem;
-}
-
-@media (max-width: 768px) {
-  .add-question-button{
-     width: 100%;
-     margin-left: 0;
-
-  }
-  .add-question-form {
-    width: 100%;
-    padding: 0;
-
-  }
-  .child1,.child2,.parent2{
-    display: flex;
-    flex-direction: column;
-  }
 }
