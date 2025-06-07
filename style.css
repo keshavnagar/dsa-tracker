@@ -172,7 +172,7 @@ tr td:nth-child(8) {
 }
 
 
-@media (max-width:360px) {
+@media (max-width:370px) {
   .add-question-button{
     margin: 1% 1% 1% 1.6%;
   }
