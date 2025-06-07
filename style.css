@@ -170,3 +170,11 @@ tr td:nth-child(8) {
   overflow-x: auto; /* horizontal scroll enable होगा */
   -webkit-overflow-scrolling: touch; /* iOS के लिए smooth scrolling */
 }
+
+
+@media (max-width:360px) {
+  .add-question-button{
+    margin: 1% 1% 1% 1.6%;
+  }
+  
+}
